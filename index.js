@@ -5,4 +5,4 @@ app.get('/', async (req, res) => {
     res.send('Welcome to Merchant API!')
 })
 
-app.listen(3000);
+app.listen(8080);
