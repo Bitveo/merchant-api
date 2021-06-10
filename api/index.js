@@ -83,13 +83,55 @@ app.get('/api/exchanges-balance', async (req, res) => {
     const responseHuobi = await huobi.fetchBalance();
 
     res.send({
-        'binance': responseBinance.BTC,
-        'ftx': responseFtx.BTC,
-        'bitfinex': responseBitfinex.BTC,
-        'kucoin': responseKucoin.BTC,
-        'poloniex': responsePoloniex.BTC,
-        'cex': responseCex.BTC,
-        'huobi': responseHuobi.BTC
+        'binance': {
+            'BTC': responseBinance.BTC,
+            'USD': responseBinance.USD,
+            'USDT': responseBinance.USDT,
+            'USDC': responseBinance.USDC,
+            'BRL': responseBinance.BRL
+        },
+        'ftx': {
+            'BTC': responseFtx.BTC,
+            'USD': responseFtx.USD,
+            'USDT': responseFtx.USDT,
+            'USDC': responseFtx.USDC,
+            'BRL': responseFtx.BRL
+        },
+        'bitfinex': {
+            'BTC': responseBitfinex.BTC,
+            'USD': responseBitfinex.USD,
+            'USDT': responseBitfinex.USDT,
+            'USDC': responseBitfinex.USDC,
+            'BRL': responseBitfinex.BRL
+        },
+        'kucoin': {
+            'BTC': responseKucoin.BTC,
+            'USD': responseKucoin.USD,
+            'USDT': responseKucoin.USDT,
+            'USDC': responseKucoin.USDC,
+            'BRL': responseKucoin.BRL
+        },
+        'poloniex': {
+            'BTC': responsePoloniex.BTC,
+            'USD': responsePoloniex.USD,
+            'USDT': responsePoloniex.USDT,
+            'USDC': responsePoloniex.USDC,
+            'BRL': responsePoloniex.BRL
+        },
+        'cex': {
+            'BTC': responseCex.BTC,
+            'USD': responseCex.USD,
+            'USDT': responseCex.USDT,
+            'USDC': responseCex.USDC,
+            'BRL': responseCex.BRL
+        },
+        'huobi': {
+            'BTC': responseHuobi.BTC,
+            'USD': responseHuobi.USD,
+            'USDT': responseHuobi.USDT,
+            'USDC': responseHuobi.USDC,
+            'BRL': responseHuobi.BRL
+        }
     })
 })
 
