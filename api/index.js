@@ -12,6 +12,7 @@ app.get('/', async (req, res) => {
         res.send('Welcome Merchant API')
     } else {
         res.send(deniedMessage)
+        console.log('Api Denied, IP:', await publicIp.v4())
     }
 })
 
@@ -21,6 +22,7 @@ app.get('/api/valid-chances', async (req, res) => {
         res.send(validChances)
     } else {
         res.send(deniedMessage)
+        console.log('Api Denied, IP:', await publicIp.v4())
     }
 })
 
@@ -30,6 +32,7 @@ app.get('/api/error-arbitration', async (req, res) => {
         res.send(errorArbitration)
     } else {
         res.send(deniedMessage)
+        console.log('Api Denied, IP:', await publicIp.v4())
     }
 })
 
@@ -39,6 +42,7 @@ app.get('/api/arbitrations', async (req, res) => {
         res.send(arbitrations)
     } else {
         res.send(deniedMessage)
+        console.log('Api Denied, IP:', await publicIp.v4())
     }
 })
 
@@ -48,6 +52,7 @@ app.get('/api/chance-arbitration', async (req, res) => {
         res.send(chanceArbitration)
     } else {
         res.send(deniedMessage)
+        console.log('Api Denied, IP:', await publicIp.v4())
     }
 })
 
@@ -160,6 +165,7 @@ app.get('/api/exchanges-balance', async (req, res) => {
         })
     } else {
         res.send(deniedMessage)
+        console.log('Api Denied, IP:', await publicIp.v4())
     }
 })
 
@@ -169,6 +175,7 @@ app.get('/api/balances', async (req, res) => {
         res.send(balances)
     } else {
         res.send(deniedMessage)
+        console.log('Api Denied, IP:', await publicIp.v4())
     }
 })
 
