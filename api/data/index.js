@@ -15,3 +15,7 @@ exports.getArbitrations = () => {
 exports.getChanceArbitration = () => {
     return database.query('SELECT * FROM merchant.arbitrations INNER JOIN merchant.valid_chances ON uuid_valid_chance=uuid')
 }
+
+exports.getBalances = () => {
+    return database.query('select * from merchant.balances')
+}

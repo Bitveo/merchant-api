@@ -23,3 +23,9 @@ exports.getChanceArbitration = () => {
     if (chanceArbitration) return chanceArbitration
     else return {}
 }
+
+exports.getBalances = () => {
+    const balances = data.getBalances()
+    if (balances) return balances
+    else return {}
+}

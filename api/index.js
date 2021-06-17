@@ -163,6 +163,15 @@ app.get('/api/exchanges-balance', async (req, res) => {
     }
 })
 
+app.get('/api/balances', async (req, res) => {
+    if(ipRangeCheck(await publicIp.v4(), process.env.VALID_IP_RANGE)){
+        const balances = await service.getBalances()
+        res.send(balances)
+    } else {
+        res.send(deniedMessage)
+    }
+})
+
 
 
 app.listen(8080);
