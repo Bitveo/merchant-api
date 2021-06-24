@@ -162,13 +162,6 @@ app.get('/api/exchanges-balance', async (req, res) => {
             'USDT': responseCex.USDT,
             'USDC': responseCex.USDC,
             'BRL': responseCex.BRL
-        },
-        'huobi': {
-            'BTC': responseHuobi.BTC,
-            'USD': responseHuobi.USD,
-            'USDT': responseHuobi.USDT,
-            'USDC': responseHuobi.USDC,
-            'BRL': responseHuobi.BRL
         }
     })
     // if(ipRangeCheck(await publicIp.v4(), process.env.VALID_IP_RANGE)){
