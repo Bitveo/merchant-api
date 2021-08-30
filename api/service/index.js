@@ -18,6 +18,12 @@ exports.getArbitrations = () => {
     else return {}
 }
 
+exports.getChanceArbitrationValues = () => {
+    const chanceArbitration = data.getChanceArbitrationValues()
+    if (chanceArbitration) return chanceArbitration
+    else return {}
+}
+
 exports.getChanceArbitration = () => {
     const chanceArbitration = data.getChanceArbitration()
     if (chanceArbitration) return chanceArbitration

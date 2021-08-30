@@ -181,6 +181,10 @@ app.get('/api/balances', async (req, res) => {
     // }
 })
 
+app.get('/api/chance-arbitration-values', async (req, res) => {
+    const chanceArbitrationValues = await service.getChanceArbitrationValues()
+    res.send(chanceArbitrationValues)
+})
 
 
 app.listen(8080);
