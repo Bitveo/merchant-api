@@ -186,5 +186,10 @@ app.get('/api/chance-arbitration-values', async (req, res) => {
     res.send(chanceArbitrationValues)
 })
 
+app.get('/api/exchanges-configuration', async (req, res) => {
+    const exchangesConfiguration = await service.getExchangesConfiguration()
+    res.send(exchangesConfiguration)
+})
+
 
 app.listen(8080);

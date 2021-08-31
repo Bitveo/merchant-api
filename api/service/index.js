@@ -35,3 +35,9 @@ exports.getBalances = () => {
     if (balances) return balances
     else return {}
 }
+
+exports.getExchangesConfiguration = () => {
+    const exchangesConfiguration = data.getExchangesConfiguration()
+    if (exchangesConfiguration) return exchangesConfiguration
+    else return {}
+}
