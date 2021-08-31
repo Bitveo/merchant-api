@@ -25,7 +25,7 @@ exports.getBalances = () => {
 }
 
 exports.getExchangesConfiguration = () => {
-    return database.query('select id, name, main_currency, main_amount, pair_currency, pair_amount, default_type_order, sum_order_multiplier_maker, sum_order_multiplier_taker, activation_spread, balancing_spread, status  from merchant.exchanges_configuration order by id')
+    return database.query('select id, name, main_currency, main_amount, pair_currency, pair_amount, default_type_order, sum_order_multiplier_maker, sum_order_multiplier_taker, activation_spread, balancing_spread, status, fee  from merchant.exchanges_configuration order by id')
 }
 
 
