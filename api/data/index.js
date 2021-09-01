@@ -13,7 +13,7 @@ exports.getArbitrations = () => {
 }
 
 exports.getChanceArbitration = () => {
-    return database.query('SELECT * FROM merchant.arbitrations INNER JOIN merchant.valid_chances ON uuid_valid_chance=uuid order by id desc')
+    return database.query('SELECT * FROM merchant.arbitrations INNER JOIN merchant.valid_chances ON uuid_valid_chance=uuid order by merchant.arbitrations.id desc')
 }
 
 exports.getChanceArbitrationValues = () => {
